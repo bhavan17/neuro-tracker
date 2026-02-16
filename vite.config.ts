@@ -7,7 +7,10 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      'sonner@2.0.3': 'sonner', // This acts as a backup redirect
+      // This "Catches" the versioned imports so you don't have to edit every file
+      'sonner@2.0.3': 'sonner',
+      'lucide-react@0.487.0': 'lucide-react',
+      'recharts@2.15.2': 'recharts',
     },
   },
   build: {
