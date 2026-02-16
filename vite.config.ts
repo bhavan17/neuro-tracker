@@ -5,12 +5,15 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-      // This maps the specific broken string directly to the installed package
-      "sonner@2.0.3": path.resolve(__dirname, 'node_modules/sonner'),
-      "sonner": path.resolve(__dirname, 'node_modules/sonner'),
-    },
+    alias: [
+      { find: '@', replacement: path.resolve(__dirname, './src') },
+      // This Regex catches any import ending in @version (like sonner@2.0.3)
+      // and redirects it to the base package name.
+      { 
+        find: /^(.+)@\d+\.\d+\.\d+$/, 
+        replacement: '$1' 
+      },
+    ],
   },
   build: {
     outDir: 'dist',
