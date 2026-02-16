@@ -14,7 +14,7 @@ import { useState, useMemo } from "react";
   } from "./ui/dropdown-menu";
   import { Avatar, AvatarFallback } from "./ui/avatar";
   import { Calendar } from "./ui/calendar";
-  import { DayProps } from "react-day-picker@8.10.1";
+  import { DayProps } from "react-day-picker";
   import { Checkbox } from "./ui/checkbox";
   
   interface CalendarPageProps {
