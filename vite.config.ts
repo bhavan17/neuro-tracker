@@ -7,6 +7,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      'sonner@2.0.3': 'sonner', // This acts as a backup redirect
     },
   },
   build: {
