@@ -7,10 +7,9 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      // This "Catches" the versioned imports so you don't have to edit every file
-      'sonner@2.0.3': 'sonner',
-      'lucide-react@0.487.0': 'lucide-react',
-      'recharts@2.15.2': 'recharts',
+      // This maps the specific broken string directly to the installed package
+      "sonner@2.0.3": path.resolve(__dirname, 'node_modules/sonner'),
+      "sonner": path.resolve(__dirname, 'node_modules/sonner'),
     },
   },
   build: {
