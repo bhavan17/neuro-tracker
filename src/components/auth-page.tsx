@@ -6,7 +6,7 @@ import { Label } from "./ui/label";
 import { Button } from "./ui/button";
 import { Mail, Lock, User, Home } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 
 interface AuthPageProps {
   onSignUp: (email: string) => void;

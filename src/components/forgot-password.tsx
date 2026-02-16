@@ -5,7 +5,7 @@ import { Label } from "./ui/label";
 import { Button } from "./ui/button";
 import { ArrowLeft, Mail, Lock } from "lucide-react";
 import { ThemeToggle } from "./theme-toggle";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 
 interface ForgotPasswordProps {
   onBack: () => void;

@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { ThemeToggle } from "./theme-toggle";
 import { AlertCircle, CheckCircle, AlertTriangle, XCircle, Shield, Calendar, TrendingUp, Home } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
-import { toast } from "sonner@2.0.3";
+import { toast } from "sonner";
 
 interface DashboardProps {
   userName?: string;
