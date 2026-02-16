@@ -7,19 +7,21 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
-      // ... keep your existing aliases
       '@': path.resolve(__dirname, './src'),
+      // This maps any Figma export versioning back to the actual installed package
+      'sonner': path.resolve(__dirname, 'node_modules/sonner'),
+      'lucide-react': path.resolve(__dirname, 'node_modules/lucide-react'),
     },
   },
   build: {
     target: 'esnext',
-    outDir: 'dist', // Changed from 'build' to 'dist' for better Vercel compatibility
-    chunkSizeWarningLimit: 1600, // Fixes the "chunk size" warning
+    outDir: 'dist', 
+    chunkSizeWarningLimit: 1600,
     rollupOptions: {
       output: {
         manualChunks(id) {
           if (id.includes('node_modules')) {
-            return 'vendor'; // Groups heavy libraries together
+            return 'vendor';
           }
         },
       },
